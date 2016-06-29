@@ -5,6 +5,7 @@ import java.security.spec.RSAPrivateCrtKeySpec;
 import java.security.spec.RSAPublicKeySpec;
 import java.util.Random;
 
+//http://xlattice.sourceforge.net/components/crypto/src/org/xlattice/crypto/RSAKeyGen.html
 public class Main {
 
     public static void main(String[] args) throws GeneralSecurityException {
@@ -53,12 +54,12 @@ public class Main {
         System.out.println("End Private Key KeySpec:===================\n");*/
 
 
-        System.out.println("Public Key KeySpec:===================\n");
+       /* System.out.println("Public Key KeySpec:===================\n");
         PublicKey publicKey =getPublicKey();
         KeyFactory keyFacPublic = KeyFactory.getInstance("RSA");
         RSAPublicKeySpec pkSpecpublic = keyFacPublic.getKeySpec(publicKey, RSAPublicKeySpec.class);
         System.out.println("Modulus : " + pkSpecpublic.getModulus().toString(16));
-        System.out.println("Public exponent : " + pkSpecpublic.getPublicExponent().toString(16));
+        System.out.println("Public exponent : " + pkSpecpublic.getPublicExponent().toString(16));*/
 
         System.out.println("Private Key KeySpec:===================\n");
         PrivateKey priv =getPrivateKey();
