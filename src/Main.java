@@ -75,21 +75,28 @@ public class Main {
         System.out.println("Prime exponent q : " + pkSpec.getPrimeExponentQ().toString(16));
         System.out.println("crtCoefficient : " + pkSpec.getCrtCoefficient().toString(16));
 
-
+      //  RSAPrivateCrtKeySpec(BigInteger modulus,
+        // BigInteger publicExponent,
+        // BigInteger privateExponent,
+        // BigInteger primeP,
+        // BigInteger primeQ,
+        // BigInteger primeExponentP,
+        // BigInteger primeExponentQ,
+        // BigInteger crtCoefficient)
 
     }
 
     private static PrivateKey getPrivateKey() throws GeneralSecurityException
     {
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
-        kpg.initialize(512);
+        kpg.initialize(1024);
         return kpg.generateKeyPair().getPrivate();
     }
 
     private static PublicKey getPublicKey() throws GeneralSecurityException
     {
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA");
-        kpg.initialize(512);
+        kpg.initialize(1024);
         return kpg.generateKeyPair().getPublic();
     }
 
